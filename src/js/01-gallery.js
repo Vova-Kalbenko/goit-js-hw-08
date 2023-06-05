@@ -18,11 +18,6 @@ const markup = galleryItems
 
 galeryEl.insertAdjacentHTML("beforeend", markup);
 
-const handleClickOnImg = (e) => {
-  e.preventDefault();
-};
-
-galeryEl.addEventListener("click", handleClickOnImg);
 
 const lightbox = new SimpleLightbox(".gallery a", {
   captionPosition: "bottom",
@@ -30,4 +25,3 @@ const lightbox = new SimpleLightbox(".gallery a", {
   captionDelay: 250,
 });
 
-console.log(lightbox);

@@ -8,8 +8,6 @@ let formData = {};
 const saveMessage = e => {
   formData[e.target.name] = e.target.value;
   localStorage.setItem('messageValue', JSON.stringify(formData));
-  console.log(e.target.name)
-  console.log(e.target.value)
 };
 
   if(localStorage.getItem('messageValue')){
@@ -19,5 +17,5 @@ const saveMessage = e => {
   }
 }
 
-formEl.addEventListener('submit', throttle(saveMessage, 500));
+formEl.addEventListener('input', throttle(saveMessage, 500));
 
