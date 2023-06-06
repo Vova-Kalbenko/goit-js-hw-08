@@ -17,7 +17,7 @@ if (localStorage.getItem('messageValue')) {
   }
 }
 
-const handlesubmitForm = e => {
+const handleSubmitForm = e => {
   e.preventDefault();
   console.log({ email: email.value, message: message.value });
   email.value === '' || message.value === ''
@@ -28,6 +28,6 @@ const handlesubmitForm = e => {
 };
 
 formEl.addEventListener('input', throttle(saveMessage, 500));
-formEl.addEventListener('submit', handlesubmitForm);
+formEl.addEventListener('submit', handleSubmitForm);
 
 
